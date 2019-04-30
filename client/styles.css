@@ -1,0 +1,176 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Here we keep the background of the body man app box */
+body{
+   background: #1ddced;
+   
+   height: 100%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Here we keep the wrap of #messages & #message 
+Change height here to amend window size for media queries*/
+.chatbox{
+    width: 500px;
+    min-width: 390px;
+    /*height: 600px;*/
+    height: 500px;
+    background: #fff;
+    padding: 25x;
+    margin: 20px auto;
+    box-shadow: 0 3px #ccc;
+    /*box-shadow: 0px 0px 20px #ccc inset;*/
+    /*overflow-y: scroll;*/
+    /*box-shadow: 0 3px #ccc;*/
+}
+
+/*makes scrolling bar invisible to human eye*/
+#messages::-webkit-scrollbar{
+    width: 10px;
+}
+
+/*makes a new rounded style very trendy*/
+#messages::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .1);
+}
+
+/* Here we keep the window and background of .messages of .message style and overflow control of white main box Change height here to amend window size for media queries*/
+#messages{
+    padding: 10px;
+    width: 100%;
+    /*height: 450px;*/
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /*box-shadow: 0px 0px 20px #ccc inset;*/
+}
+
+/* Here we keep the messages align boxes */
+.message{
+    display: flex;
+    flex-flow:row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    
+}
+
+
+/* Here goes the Nickname styles */
+strong{
+    width: auto;
+    height: auto;
+    background: rgb(221, 221, 221);
+    overflow-y: auto;
+    margin-top: 17px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-style: oblique;
+}
+
+
+/* Here goes the messages box conversation styles */       
+p{
+    /*
+    width: 70%;
+    padding: 15px;
+    margin: 5px 10px 0;
+    background: #1ddced;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    */
+    width: 70%;
+    height: auto;
+    padding: 15px;
+    background: #1ddced;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+form{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+textarea{
+    background: #fbfbfb;
+    width: 75%;
+    height: 50px;
+    margin-left: 20px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    resize: none;
+    font-size: 18px;
+    padding: 10px;
+    color: #333;
+}
+
+
+textarea:focus{
+    background: #fff;
+}
+
+
+/*makes scrolling bar invisible to human eye*/
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+/*makes a new rounded style very trendy*/
+textarea::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .1);
+}
+
+
+#button{
+    background: #1ddced;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 #0eb2c1;
+    cursor: pointer;
+}
+
+
+#button:hover{
+    background: #09a6b4;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .chatbox {
+      height: 550px;
+      width: 300px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #messages {
+      height: 300px;
+      width: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>client side of socket.io</title>
+
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+    <script src="./main.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chatbox">
+
+        <h1>Chat con Socket.io y NodeJS</h1>
+
+        <!--Here are the messages that users will receive from the array-->
+        <div id="messages"></div>
+
+        <!--This form will emit the event of sending .message (little messages) including nickname an update elements and return the array to div messages-->    
+        <form onsubmit="return addMessage(this);">
+            <input type="text"  id="nickname" placeholder="Nickname..." style="width: 70px;">
+            
+            <textarea name="text" id="text" cols="30" rows="2" placeholder="Mensaje..."></textarea>
+            <input id="button" type="submit" value="Enviar">
+        </form>
+
+
+    </div>
+</body>
+</html>
