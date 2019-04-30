@@ -1,6 +1,6 @@
 //var socket = io.connect('http://192.168.0.22:6677', {'forceNew':true});
 var port = process.env.PORT;
-var socket = io.connect(port);
+var socket = io.connect(port+1);
 socket.on('messages', function(data){
     console.log(data);
     render(data);
